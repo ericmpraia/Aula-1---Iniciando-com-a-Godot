@@ -1,14 +1,23 @@
 [gd_scene format=3 uid="uid://ctla6dkpe4fed"]
 
 [ext_resource type="PackedScene" uid="uid://cefq2ey8ivm6s" path="res://scenes/player.tscn" id="1_014kd"]
+[ext_resource type="Texture2D" uid="uid://b2f8b5q58pvl3" path="res://assets/kenney_platformer-art-deluxe/Base pack/Tiles/boxCoin_disabled.png" id="1_bswci"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rus8k"]
+size = Vector2(1134.5, 65)
 
 [node name="level1" type="Node2D" unique_id=1628513243]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=805373906]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2138296826]
+position = Vector2(574.75, 608)
+scale = Vector2(16.235716, 1)
+texture = ExtResource("1_bswci")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=14081707]
+position = Vector2(579.75, 607)
+shape = SubResource("RectangleShape2D_rus8k")
 
 [node name="player" parent="." unique_id=1226084640 instance=ExtResource("1_014kd")]
 position = Vector2(573, 324)

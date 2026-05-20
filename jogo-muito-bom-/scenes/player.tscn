@@ -1,20 +1,73 @@
 [gd_scene format=3 uid="uid://cefq2ey8ivm6s"]
 
 [ext_resource type="Script" uid="uid://dju1fu1g6a4kl" path="res://scenes/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://b7qvttk5swosa" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_front.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://dn268cxyjl7ao" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk01.png" id="2_3v2ag"]
+[ext_resource type="Texture2D" uid="uid://d22nvd0yvj8vt" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk02.png" id="3_jej6c"]
+[ext_resource type="Texture2D" uid="uid://blrtvntpk1y7n" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk03.png" id="4_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://cbb1h3i42nr7n" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk04.png" id="5_oprun"]
+[ext_resource type="Texture2D" uid="uid://dfsqlh3shgbe4" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk05.png" id="6_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://h5u2j6s6yhk0" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk06.png" id="7_qfm1y"]
+[ext_resource type="Texture2D" uid="uid://bcr5rn0vw1slf" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk07.png" id="8_fulsm"]
+[ext_resource type="Texture2D" uid="uid://cq0q8bvr6r82l" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk08.png" id="9_4r5pv"]
+[ext_resource type="Texture2D" uid="uid://bsptiyj6w57dh" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk09.png" id="10_60mlk"]
+[ext_resource type="Texture2D" uid="uid://cd1tk1r6o2no1" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk10.png" id="11_i4ail"]
+[ext_resource type="Texture2D" uid="uid://cywgw6wqrm738" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk11.png" id="12_a38lo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqkch"]
 radius = 32.0
 height = 98.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ni07"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3v2ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jej6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f1ej7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oprun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a8ls1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qfm1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fulsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4r5pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_60mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_i4ail")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_a38lo")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 15.0
+}]
+
 [node name="player" type="CharacterBody2D" unique_id=1226084640]
 script = ExtResource("1_g2els")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1853239299]
-texture = ExtResource("2_qhqgy")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=613958815]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=380058544]
 position = Vector2(-1, -1)
 shape = SubResource("CapsuleShape2D_dqkch")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=310929132]
+sprite_frames = SubResource("SpriteFrames_4ni07")
+animation = &"walk"
+frame_progress = 0.86212003
