@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dju1fu1g6a4kl" path="res://scenes/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://dn268cxyjl7ao" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk01.png" id="2_3v2ag"]
+[ext_resource type="Texture2D" uid="uid://b087m2dptx8hk" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_stand.png" id="2_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://d22nvd0yvj8vt" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk02.png" id="3_jej6c"]
+[ext_resource type="Texture2D" uid="uid://cd72vaadex8xv" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_jump.png" id="3_oprun"]
 [ext_resource type="Texture2D" uid="uid://blrtvntpk1y7n" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk03.png" id="4_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://cbb1h3i42nr7n" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk04.png" id="5_oprun"]
 [ext_resource type="Texture2D" uid="uid://dfsqlh3shgbe4" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p1_walk/PNG/p1_walk05.png" id="6_a8ls1"]
@@ -19,6 +21,22 @@ height = 98.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4ni07"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_f1ej7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_oprun")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_3v2ag")
@@ -70,4 +88,3 @@ shape = SubResource("CapsuleShape2D_dqkch")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=310929132]
 sprite_frames = SubResource("SpriteFrames_4ni07")
 animation = &"walk"
-frame_progress = 0.86212003
